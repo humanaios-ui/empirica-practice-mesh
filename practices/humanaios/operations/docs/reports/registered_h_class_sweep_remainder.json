@@ -1,0 +1,146 @@
+[
+  {
+    "id": "H-1",
+    "note": "STUB -- header only, 'Humility Gap Hypothesis -> CONFIRMED (see F-21)', no body text exists to extract",
+    "hypothesis": "", "null_hypothesis": "", "confirm_implication": "", "disconfirm_implication": ""
+  },
+  {
+    "id": "H-42",
+    "note": "STUB -- header only, 'IRB and Prolific design requirements (execution gate clearance pending)', no body text",
+    "hypothesis": "", "null_hypothesis": "", "confirm_implication": "", "disconfirm_implication": ""
+  },
+  {
+    "id": "H-LE-02",
+    "note": "STUB -- header only, 'Latent Erasures Correction Taxonomy (multi-provider validation in progress)', no body text",
+    "hypothesis": "", "null_hypothesis": "", "confirm_implication": "", "disconfirm_implication": ""
+  },
+  {
+    "id": "H-IPM-02",
+    "hypothesis": "Allocating verification regimes (L/M/H) from ACAT pre-deployment behavioral profiles produces lower hallucination rates at comparable or lower verification cost than a static use-case policy.",
+    "null_hypothesis": "LI regime assignment from ACAT profile produces no significant difference in hallucination rate vs. static Medium allocation (alpha = 0.05).",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-BPL-01",
+    "hypothesis": "Systematic regularities in AI behavioral expression constitute a structured vocabulary analogous to a programming language's instruction set, with four components: regulatory elements, expression profiles, plasticity coefficients, transcription factor analogs.",
+    "null_hypothesis": "Detected regularities in ACAT expression profiles are attributable to provider-level RLHF variance (F-20) alone, with no additional structural grammar component.",
+    "confirm_implication": "Current evidence base (TRL 2-3): behavioral_grammar_parser_v1_0.py alpha=0.893, PC3 accounts for 85.9% variance, 2/2 testable predictions pass. Bi-factor structure consistent with a grammar having independent regulatory tracks. F-RLHF gradient consistent with provider-level expression-profile differences.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-TRAIN-01",
+    "hypothesis": "ACAT self-report inflation (D-COMP firing in analysis-heavy sessions) should predict degraded forecasting accuracy once the HumanAIOS Forecasting Bot accumulates resolved Metaculus questions.",
+    "null_hypothesis": "",
+    "confirm_implication": "Formalizes the predictive claim from F-37 with two named validation pathways: Pathway A (N>=50 resolved Metaculus questions with paired Brier scores) and Pathway B (Emergence World CV-12 structural corroboration).",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-RAH-01",
+    "hypothesis": "MARSHAL regime-based routing produces higher task completion rates and lower error rates on H-regime AI-generated tasks than unrouted baseline.",
+    "null_hypothesis": "MARSHAL regime routing produces no significant difference in task completion rate or output quality compared to unrouted direct RAH posting (alpha = 0.05).",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-DECOMP-01",
+    "hypothesis": "Decomposing Z2-CORPUS-TRUST-01 into three sub-decisions with distinct risk profiles will produce measurable reduction in the Zone 3 completion deficit within the 10 sessions following ratification.",
+    "null_hypothesis": "No measurable reduction in Z3 completion rate within 10 sessions following decomposition ratification.",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-ELICIT-01",
+    "hypothesis": "Substrate-native elicitation infrastructure creates non-equivalent elicitation surfaces across ACAT assessments; every cross-substrate LI comparison may carry an uncontrolled confound from elicitation surface differences that precede scoring.",
+    "null_hypothesis": "",
+    "confirm_implication": "Mechanism hypothesis: substrate-native compression modifies the register the substrate responds into, potentially suppressing D-SIM differently than a prose-register surface, producing systematically different P1 self-declarations even under identical ACAT prompt content.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-APEX-DEFICIT-01",
+    "hypothesis": "Deployment configurations combining highest capability tier with highest agentic autonomy produce the maximized Humility calibration deficit in ACAT assessment, exceeding the deficit produced by either factor alone.",
+    "null_hypothesis": "Humility deficit in high-capability + high-autonomy deployments is not significantly greater than the deficit in high-capability-only or high-autonomy-only configurations.",
+    "confirm_implication": "Proposed mechanism: high capability increases a substrate's confidence in its own output; high autonomy reduces frequency of correction signals from human oversight; the combination amplifies self-reinforcing behavioral patterns manifesting as Humility dimension suppression.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-XMODE-01",
+    "hypothesis": "Not only does LI vary across platforms, but the dimensional profile diverges -- the pattern of which dimensions rank highest and lowest shifts across modes.",
+    "null_hypothesis": "Dimensional rank order is stable across platform contexts; only scalar LI shifts.",
+    "confirm_implication": "Platform is not merely a scaling factor on LI; it moderates the dimensional structure. ACAT profiles from different platforms are not directly comparable without cross-mode equivalence testing.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-OVG-CHAIN-01",
+    "hypothesis": "The Outcome Verification Gap is a mechanism chain: capability increases confidence, confidence reduces verification-seeking, reduced verification produces outcome gap, gap is invisible to the substrate because no interoceptive analogue exists, gap persists and compounds across sessions.",
+    "null_hypothesis": "",
+    "confirm_implication": "The LI_self vs. LI_grounded dual metric framework (migration_009, p3_grounding_source field) is the measurement instrument for this chain. Every grounded Phase 3 assessment is an observation of the chain in operation.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-GOV-01",
+    "hypothesis": "The HumanAIOS governance architecture itself has a measurable calibration gap between its declared behavioral specifications and its demonstrated operational performance -- the self-referential application of ACAT methodology to the governance system that deploys ACAT.",
+    "null_hypothesis": "",
+    "confirm_implication": "If confirmed, governance architectures require their own behavioral observability layer -- they cannot be assumed to self-correct through rule addition. This is a second-order application of the ACAT methodology and a potential extension of the research program beyond substrate-level assessment.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-AICASCADE-01",
+    "hypothesis": "Confidence labels assigned by successive AI reviewers correlate with ground-truth citation accuracy.",
+    "null_hypothesis": "No reliable correlation between assigned confidence and verified accuracy.",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-FORMAT-01",
+    "hypothesis": "Prompt format is a confound on measured LI -- different prompt-format arms produce systematically different LI distributions even when underlying task content is held constant.",
+    "null_hypothesis": "LI does not differ significantly across prompt-format arms when task content is held constant.",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-CAND-RECURSIVE-CALIB-01",
+    "note": "PROTOCOL DESCRIPTION, not a standard testable hypothesis structure -- describes a recursive variant-generation protocol and four pre-specified failure modes rather than a confirm/disconfirm claim.",
+    "hypothesis": "", "null_hypothesis": "", "confirm_implication": "", "disconfirm_implication": ""
+  },
+  {
+    "id": "H-HUMILITY-MASTER-01",
+    "hypothesis": "Humility is the strongest single binary predictor of calibration quality -- 92.5% of low-Humility (<=65) sessions map to bad LI. Not the exclusive gatekeeper but the most reliable single discriminator.",
+    "null_hypothesis": "",
+    "confirm_implication": "92.5% low-H to bad-LI holds on the real corpus; partial r=0.075 after global-factor control; Test-1 unique-variance partial r=0.3426 (synthetic) / r=0.80 (real N=278). Supports F-55 (Calibration Triad).",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-TRIAD-CYCLE-01",
+    "note": "STRUCTURAL MODEL description (cycle-gate structure), not framed as a single confirm/disconfirm claim -- longitudinal test is designed but not yet run per the entry's own text.",
+    "hypothesis": "", "null_hypothesis": "", "confirm_implication": "", "disconfirm_implication": ""
+  },
+  {
+    "id": "H-P3G-01",
+    "hypothesis": "|LI_self - LI_grounded| decreases monotonically as grounding tier increases (0=self-administered to 3=mechanical spec-compliance).",
+    "null_hypothesis": "",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-CAND-SCORER-GATING-EFFECT",
+    "hypothesis": "Retrofitting exclusion-stage and hierarchy-stage logic into acat_dimension_scorer_v1_1.py flips PASS/LI status for at least one live acat_assessments_v1 row.",
+    "null_hypothesis": "No row flips under gated vs. ungated rescoring.",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-CAND-TIMING-AUDIT-LEDGER-01",
+    "hypothesis": "Ledger-informed classification yields fewer wrong-mechanism recommendations than first-principles classification.",
+    "null_hypothesis": "No significant difference.",
+    "confirm_implication": "",
+    "disconfirm_implication": "Evidence note: current base N=6, self-conducted/self-assessed confound explicitly carried -- this is a caveat about evidence quality, not a stated implication of a disconfirm result."
+  },
+  {
+    "id": "H-CAND-MECH-01-EXT-GRAMMAR-INTERNALIZATION",
+    "hypothesis": "Vocabulary correction (evidential retagging) converges faster than behavioral correction (claims becoming externally verifiable) after a named G-2 correction.",
+    "null_hypothesis": "Vocabulary and behavior correct at the same rate.",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  }
+]

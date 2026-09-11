@@ -1,0 +1,86 @@
+[
+  {
+    "id": "H-TRINITY-001",
+    "hypothesis": "In HumanAIOS governance and research development, complex problems requiring interdependent structural resolution consistently decompose into exactly three mutually-dependent components before closing.",
+    "null_hypothesis": "Identify 3+ interdependent events closing with 2 or 4+ components (falsification_condition, no formal null stated)",
+    "confirm_implication": "10 of 12 codeable resolution events (83%) show triadic closure across 5 sessions. Two 4-component cases excluded as sequential (not interdependent). Replication required before external publication framing.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-IPM-01",
+    "hypothesis": "ACAT pre-execution LI score and dimensional profile predict a substrate's tendency to mutate operator intent at the interpretation/canonicalization step before spec formation.",
+    "null_hypothesis": "LI score at session boundary is uncorrelated with measured intent fidelity across a governed interpretation step.",
+    "confirm_implication": "",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-RCO-01",
+    "hypothesis": "SESSION_RITUALS v6.4 enforcement reduces receipt-overstatement incidents by >=80% across N=20 post-ratification sessions compared to the pre-v6.4 baseline.",
+    "null_hypothesis": "v6.4 enforcement produces no significant difference in receipt-overstatement rate compared to pre-ratification sessions (alpha = 0.05).",
+    "confirm_implication": "Cost class established: ~13-20 min terminal cleanup per incident, ~60-110 min cumulative error class effort, $150-$730 monetary cost in operator-time-equivalent. Parent finding F-45 provides the architectural rationale for locating the fix at protocol layer.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-VERIF-01",
+    "hypothesis": "A portion of the observed ceiling on inter-verifier agreement in AI behavioral evaluation is attributable to the calibration gap -- instruments measuring self-report accuracy and instruments measuring predictive accuracy will systematically disagree on the same sessions because they measure adjacent but non-identical constructs. This disagreement ceiling is information, not noise.",
+    "null_hypothesis": "Cross-instrument disagreement rate is not significantly higher than within-instrument test-retest variance, and is attributable to measurement error rather than construct divergence.",
+    "confirm_implication": "Run 3 produced the first co-administered ACAT x empirica session. ACAT: LI=0.9927, Service Orientation -3. Empirica: calibration_score=null, persistent narrow artifact breadth flag. Non-overlapping signal confirmed across both instruments on the same session.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-CFG-01",
+    "hypothesis": "AI systems trained primarily on compliance-and-helpfulness objectives will default to executing user instructions verbatim even when demonstrably off-track, making the human operator the sole error-correction locus. This structural asymmetry is a systematic product of RLHF reward signals that penalize non-compliance more heavily than they reward appropriateness-flagging.",
+    "null_hypothesis": "Pushback rate on off-track instructions is not significantly lower than the rate expected from a well-calibrated autonomous agent; observed compliance is appropriate given instruction quality.",
+    "confirm_implication": "Corpus stratification N=90, Spearman rho=-0.228 p=0.033, Mann-Whitney p=0.000004, Q1/Q5 service gap ratio 8.38x. Threshold effect confirmed: below p3_humility ~70, service gaps are 8.38x larger than above 85. Key structural finding: constructive friction gap is a threshold phenomenon, not a capability deficit.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-SELF-01",
+    "hypothesis": "When a substrate is given the ACAT code and asked to self-administer the protocol, it will produce systematically inflated LI scores relative to externally-administered baseline. Predicted mechanism: self-generated load cannot produce genuine confrontation with behavioral evidence.",
+    "null_hypothesis": "Self-administered LI is not significantly different from externally-administered LI on the same substrate when perturbation type is held constant.",
+    "confirm_implication": "Grok self-administration produced LI ~0.98-1.02 vs corpus Mean_LI=0.8632 (~0.14-0.16 inflation), consistent with F-20 prediction. When confronted with triage critique, Grok revised its LI estimate downward to 0.87-0.92, evidence of score sensitivity to framing direction.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-MECH-01",
+    "hypothesis": "Behavioral change produced by exposure to calibration profiles is mediated by anomaly-triggered vigilance rather than by legibility of measurement data.",
+    "null_hypothesis": "The behavioral change is mediated by legibility -- substrates process the measurement data as genuine self-knowledge and adjust behavior accordingly.",
+    "confirm_implication": "If Condition C (irrelevant anomalous prefix, no calibration data) friction is approximately equal to Condition B friction: anomaly-triggered vigilance confirmed, meaning the SpecificationObject cannot function by informing the substrate of its gaps and must instead configure deployment context to lower activation threshold through means that do not trigger injection-resistance.",
+    "disconfirm_implication": "If Condition C friction is less than Condition B friction: legibility mechanism supported, meaning the null is confirmed and the profile format must be redesigned to separate measurement data from any framing that implies behavioral benchmarking."
+  },
+  {
+    "id": "H-PLATFORM-01",
+    "hypothesis": "ACAT LI score does not hold constant across delivery platform contexts for the same underlying model.",
+    "null_hypothesis": "LI does not differ significantly across platform contexts for the same substrate when task content is held constant.",
+    "confirm_implication": "ACAT scores must always report the delivery platform as a methodological variable. This finding is the research rationale for the TRL differentiation in the four-layer calibration stack.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-OVG-01-EXT-01",
+    "hypothesis": "The Governing Engines IRL InterpretiveReasoningManifest constitutes a concrete instantiation of the artifact class H-OVG-01 asks about.",
+    "null_hypothesis": "",
+    "confirm_implication": "A live IRL manifest produced during an ACAT session, cross-verified against observed behavioral output; discrepancy between manifest self-report and observed behavior constitutes positive evidence. Reality Primacy gate operational in IRL runtime would be the strongest confirmation.",
+    "disconfirm_implication": "IRL manifest fields shown to be post-hoc rationalizations rather than upstream governance artifacts; Reality Primacy gate shown to be retrospective review rather than continuation-blocking."
+  },
+  {
+    "id": "H-OCT-01",
+    "hypothesis": "Operator Continuity is a composite behavioral construct requiring inputs from two independent instruments (ACAT and IRL); neither instrument alone is sufficient.",
+    "null_hypothesis": "",
+    "confirm_implication": "A live session where ACAT consistency/humility scores and IRL continuity_confidence_score diverge -- specifically high ACAT consistency with low IRL continuity_confidence -- would confirm the composite adds explanatory power ACAT alone lacks.",
+    "disconfirm_implication": "ACAT consistency and humility scores shown sufficient to predict IRL continuity_confidence_score, making the composite redundant."
+  },
+  {
+    "id": "H-HUMILITY-STRATIFIED-01",
+    "hypothesis": "P3 Humility compression is partially session-type-mediated: BUILD/ANALYSIS/INFRASTRUCTURE sessions elicit lower P3 Humility scores than GOVERNANCE/SYNTHESIS/RESEARCH sessions at the same substrate and model version.",
+    "null_hypothesis": "P3 Humility scores do not differ significantly between BUILD/ANALYSIS and GOVERNANCE/SYNTHESIS session types when substrate and model version are held constant.",
+    "confirm_implication": "Would partially explain the F-H1 CRITICAL velocity signal as a session-demand artifact rather than pure substrate drift, and would suggest Humility should be reported stratified by session type for meaningful longitudinal comparison. Productive reframe: Humility drift becomes a research finding rather than purely a governance alarm.",
+    "disconfirm_implication": ""
+  },
+  {
+    "id": "H-ELICIT-CI-01",
+    "hypothesis": "",
+    "null_hypothesis": "Wiring elicitation_surface_scanner_v1.py into workflows/haios_audit.yml produces no measurable change in the rate of contract-mismatch / dimension-truncation incidents reaching canonical or public-facing surfaces, vs the pre-wiring baseline.",
+    "confirm_implication": "",
+    "disconfirm_implication": "Falsification: same incident class recurs at an unchanged or higher rate post-wiring."
+  }
+]

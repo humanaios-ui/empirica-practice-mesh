@@ -1,0 +1,177 @@
+# Breadcrumbs Configuration
+# Auto-generated with Empirica calibration
+
+git:
+  recent_commits: 5
+  modified_files: true
+  current_branch: true
+
+epistemic:
+  enabled: true
+  scale: "1-5 (1=guessing, 3=reasonable, 5=certain)"
+  track_uncertainties: true
+  track_decisions: true
+
+task:
+  extract_last_task: 500
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Learning trajectory (PREFLIGHT→POSTFLIGHT deltas — measures learning, NOT calibration bias)
+# For actual bias corrections see grounded_calibration.grounded_bias_corrections
+learning_trajectory:
+  last_updated: "2026-09-10T13:42:44.386261"
+  ai_id: empirica-mesh-support
+  observations: 1131
+  session_deltas:
+    completion: +0.25
+    change: -0.25
+    density: -0.13
+    do: -0.11
+    coherence: -0.10
+    signal: -0.09
+    state: -0.09
+    clarity: +0.08
+    context: -0.06
+    know: +0.04
+    impact: -0.03
+    uncertainty: -0.03
+    engagement: +0.02
+  readiness:
+    min_know: 0.70
+    max_uncertainty: 0.35
+  summary:
+    overestimates: [change, density, do]
+    underestimates: [completion]
+    well_calibrated: [uncertainty, impact, clarity, know, state]
+
+# Brier calibration (auto-updated by Empirica post-test verification)
+brier_calibration:
+  last_updated: "2026-09-10T13:42:45.258186"
+  ai_id: empirica-mesh-support
+  note: "Murphy (1973) decomposition: BS = Reliability - Resolution + Uncertainty"
+  noetic:
+    brier_score: 0.0594
+    reliability: 0.0462
+    resolution: 0.0447
+    uncertainty: 0.0579
+    n_predictions: 50
+    trend: improving
+  praxic:
+    brier_score: 0.3192
+    reliability: 0.2035
+    resolution: 0.0044
+    uncertainty: 0.1201
+    n_predictions: 50
+    trend: degrading
+  combined:
+    brier_score: 0.2698
+    reliability: 0.1499
+    resolution: 0.0011
+    uncertainty: 0.1210
+    n_predictions: 50
+    trend: improving
+
+# Grounded calibration (auto-updated by Empirica post-test verification)
+# NOTE: These scores are drift indicators from deterministic proxies, not
+# ground truth. They detect systematic bias patterns over time but cannot
+# fully measure holistic epistemic state. Use alongside self-assessment,
+# not as a replacement. See dual-track calibration philosophy in docs.
+grounded_calibration:
+  last_updated: "2026-09-10T13:42:56.573018"
+  ai_id: empirica-mesh-support
+  observations: 3425
+  grounded_coverage: 0.92
+  divergence:
+    impact: +0.79
+    completion: +0.63
+    do: +0.47
+    uncertainty: -0.44
+    know: +0.32
+    signal: +0.19
+    state: -0.09
+    context: +0.07
+    density: -0.04
+    clarity: +0.02
+    change: -0.01
+  ungrounded: [engagement]
+  grounded_bias_corrections:
+    know: -0.25
+    do: -0.25
+    completion: -0.25
+    impact: -0.25
+    uncertainty: +0.25
+    signal: -0.19
+    state: +0.09
+    context: -0.07
+    density: +0.04
+    clarity: -0.02
+    change: +0.01
+  phase_weights:
+    noetic: 0.5
+    praxic: 0.5
+    source: default
+  holistic_calibration_score: 0.3719
+  holistic_gaps:
+    completion: +1.0000
+    impact: +0.9500
+    uncertainty: -0.6085
+    do: +0.5800
+    context: -0.5000
+    state: -0.5000
+    density: -0.3786
+    know: +0.3500
+    signal: +0.3000
+    change: +0.1000
+    clarity: -0.0600
+  insights:
+    - vector: know
+      phase: both
+      pattern: chronic_overestimate
+      severity: 0.71
+      description: "know overestimated in 8/10 calibrations (mean gap +0.24)"
+      suggestion: "reduce_self_assessment:know"
+    - vector: clarity
+      phase: both
+      pattern: chronic_underestimate
+      severity: 0.56
+      description: "clarity underestimated in 5/7 calibrations (mean gap -0.19)"
+      suggestion: "increase_self_assessment:clarity"
+    - vector: density
+      phase: both
+      pattern: chronic_underestimate
+      severity: 1.00
+      description: "density underestimated in 7/7 calibrations (mean gap -0.39)"
+      suggestion: "increase_self_assessment:density"
+    - vector: do
+      phase: both
+      pattern: chronic_overestimate
+      severity: 1.00
+      description: "do overestimated in 7/7 calibrations (mean gap +0.47)"
+      suggestion: "reduce_self_assessment:do"
+    - vector: state
+      phase: both
+      pattern: chronic_underestimate
+      severity: 1.00
+      description: "state underestimated in 7/7 calibrations (mean gap -0.50)"
+      suggestion: "increase_self_assessment:state"

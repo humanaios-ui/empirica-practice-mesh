@@ -1,0 +1,7 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "/Users/andersonfamily/.claude/plugins/local/empirica/scripts/statusline-wrapper.sh",
+    "refresh_ms": 5000
+  }
+}
