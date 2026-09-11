@@ -1,0 +1,10 @@
+{
+  "transaction_id": "2dce34f1-2273-4f3a-af2d-c79c3b6ccbde",
+  "session_id": "088f2198-4cb2-49b0-b045-29dfc41dd395",
+  "claude_session_id": null,
+  "preflight_timestamp": 1782899619.634548,
+  "status": "open",
+  "project_path": "/Users/andersonfamily/practices/humanaios/empirica-foundation",
+  "updated_at": 1782899619.634644,
+  "avg_turns": 0
+}

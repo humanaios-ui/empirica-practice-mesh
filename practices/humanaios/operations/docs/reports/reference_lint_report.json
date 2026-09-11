@@ -1,0 +1,44 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/humanaios-ui/operations/main/CURRENT.md",
+    "source_file": "CURRENT.md",
+    "http_status": 200,
+    "verdict": "LIVE",
+    "checked_at": "2026-07-13T16:08:15.510923+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/humanaios-ui/operations/main/PRINCIPLES_SEED.md",
+    "source_file": "CURRENT.md",
+    "http_status": 404,
+    "verdict": "DEAD",
+    "checked_at": "2026-07-13T16:08:15.510923+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/humanaios-ui/operations/main/REGISTERED.md",
+    "source_file": "CURRENT.md",
+    "http_status": 200,
+    "verdict": "LIVE",
+    "checked_at": "2026-07-13T16:08:15.510923+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/humanaios-ui/operations/main/SEED.md",
+    "source_file": "CURRENT.md",
+    "http_status": 200,
+    "verdict": "LIVE",
+    "checked_at": "2026-07-13T16:08:15.510923+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/humanaios-ui/operations/main/GOVERNANCE.md",
+    "source_file": "GOVERNANCE.md",
+    "http_status": 200,
+    "verdict": "LIVE",
+    "checked_at": "2026-07-13T16:08:15.510923+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/humanaios-ui/operations/main/SESSION_RITUALS.md",
+    "source_file": "SESSION_RITUALS.md",
+    "http_status": 200,
+    "verdict": "LIVE",
+    "checked_at": "2026-07-13T16:08:15.510923+00:00"
+  }
+]

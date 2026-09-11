@@ -1,0 +1,37 @@
+{
+  "tool": "tier1_logprob_capability_probe",
+  "version": "1.0.0",
+  "zone": 1,
+  "timestamp": "2026-07-12T04:56:20.225909+00:00",
+  "source": "live_probe",
+  "results": [
+    {
+      "provider": "anthropic",
+      "reachable": true,
+      "tier": null,
+      "error": "CREDENTIAL_MISSING",
+      "note": "ANTHROPIC_API_KEY not set. This probe will not run with a placeholder or skip silently -- it refuses until the real credential is present."
+    },
+    {
+      "provider": "openai",
+      "reachable": false,
+      "call_succeeded": null,
+      "tier": "unreachable_from_here",
+      "note": "api.openai.com is not in this sandbox's network egress allowlist. This must run in an environment whose policy permits it (Night's own tooling, or an MCP connector with provider access) -- not a credential problem."
+    },
+    {
+      "provider": "google",
+      "reachable": false,
+      "call_succeeded": null,
+      "tier": "unreachable_from_here",
+      "note": "generativelanguage.googleapis.com is not in this sandbox's network egress allowlist. This must run in an environment whose policy permits it (Night's own tooling, or an MCP connector with provider access) -- not a credential problem."
+    },
+    {
+      "provider": "xai",
+      "reachable": false,
+      "call_succeeded": null,
+      "tier": "unreachable_from_here",
+      "note": "api.x.ai is not in this sandbox's network egress allowlist. This must run in an environment whose policy permits it (Night's own tooling, or an MCP connector with provider access) -- not a credential problem."
+    }
+  ]
+}

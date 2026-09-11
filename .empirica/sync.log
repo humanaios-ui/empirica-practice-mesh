@@ -48,3 +48,39 @@ Generated: 2026-09-11T16:59:10.814948
 
 (Daily report: parse .empirica/sync.log and summarize changes)
 2026-09-11 16:59:10,815 | INFO | === Entity Sync Pipeline Completed ===
+2026-09-11 12:13:31,752 | INFO | === Entity Sync Pipeline Started ===
+2026-09-11 12:13:31,779 | INFO | Sync Task 1: Projects
+2026-09-11 12:13:32,227 | INFO | Discovered project.yaml in repo: github
+2026-09-11 12:13:32,365 | INFO | Discovered project.yaml in repo: github
+2026-09-11 12:13:32,506 | INFO | Discovered project.yaml in repo: humanaios-ui
+2026-09-11 12:13:32,681 | INFO | Discovered project.yaml in repo: humanaios-ui
+2026-09-11 12:13:36,524 | INFO | Discovered project.yaml in repo: humanaios
+2026-09-11 12:14:57,478 | INFO | Discovered 5 project.yaml files total
+2026-09-11 12:15:00,951 | INFO | Project synced: canonical_id=org-empirica-foundation.carly.humanaios-internal, ai_id=humanaios-internal, hash=7d2ba4a6
+2026-09-11 12:15:00,970 | INFO | Project synced: canonical_id=org-empirica-foundation.carly.acat-x, ai_id=acat-x, hash=ea0e6b22
+2026-09-11 12:15:00,981 | INFO | Project synced: canonical_id=org-empirica-foundation.carly.empirica-outreach, ai_id=empirica-outreach, hash=1ef7f5a4
+2026-09-11 12:15:00,990 | INFO | Project synced: canonical_id=org-empirica-foundation.carly.humanaios, ai_id=humanaios, hash=60cead41
+2026-09-11 12:15:01,028 | INFO | Project synced: canonical_id=org-empirica-foundation.carly.empirica, ai_id=empirica, hash=51dfd329
+2026-09-11 12:15:01,028 | INFO |   Result: {'created': 5, 'updated': 0, 'errors': 0}
+2026-09-11 12:15:01,029 | INFO | Sync Task 2: Contacts
+2026-09-11 12:15:03,061 | INFO | Extracted 2 contacts from git log
+2026-09-11 12:15:03,061 | INFO | Contact synced: email=noreply@anthropic.com, name=Claude
+2026-09-11 12:15:03,061 | INFO | Contact synced: email=aioshuman@gmail.com, name=Carly R. Anderson
+2026-09-11 12:15:03,061 | INFO |   Result: {'created': 2, 'updated': 0, 'errors': 0}
+2026-09-11 12:15:03,061 | INFO | Sync Task 3: Engagements
+2026-09-11 12:15:03,061 | INFO | Engagement sync completed (no engagement records found)
+2026-09-11 12:15:03,061 | INFO |   Result: {'created': 0, 'updated': 0, 'errors': 0}
+2026-09-11 12:15:03,062 | INFO | Sync Task 4: Organizations
+2026-09-11 12:15:03,062 | INFO | Organization sync completed (static, no changes expected)
+2026-09-11 12:15:03,062 | INFO |   Result: {'created': 0, 'updated': 0, 'errors': 0}
+2026-09-11 12:15:03,062 | INFO | Running post-sync validation...
+2026-09-11 12:15:03,062 | INFO | Validation: no_orphaned_relationships = PASS
+2026-09-11 12:15:03,062 | INFO | Validation: no_duplicate_canonical_ids = PASS
+2026-09-11 12:15:03,062 | INFO | Validation: all_authority_tiers_valid = PASS
+2026-09-11 12:15:03,062 | INFO | Validation: all_references_resolve = PASS
+2026-09-11 12:15:03,062 | INFO | ✓ All validations passed
+2026-09-11 12:15:03,062 | INFO | === Entity Sync Report ===
+Generated: 2026-09-11T12:15:03.062582
+
+(Daily report: parse .empirica/sync.log and summarize changes)
+2026-09-11 12:15:03,062 | INFO | === Entity Sync Pipeline Completed ===

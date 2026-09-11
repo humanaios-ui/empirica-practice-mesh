@@ -1,0 +1,58 @@
+version: '3.0'
+ai_id: empirica-autonomy
+canonical_seat: empirica-foundation.carly.empirica-autonomy
+classification: internal
+created_at: '2026-06-26'
+created_by: andersonfamily
+description: 'empirica-foundation builder practice — owns the autonomy/ECO mechanics:
+  the propose-gating model, autonomy levels, and trust boundaries that govern how
+  much a practice can act without human approval. Charter provisional, to be defined
+  with owner.'
+org_id: org-empirica-foundation
+tenant_slug: carly
+type: software
+auto_detect:
+  enabled: true
+  method: path_match
+calibration_weights:
+  noetic:
+    know: 1.0
+    context: 0.8
+    signal: 0.9
+    uncertainty: 1.0
+    do: 0.3
+    change: 0.2
+    state: 0.3
+    completion: 0.5
+    impact: 0.3
+    clarity: 0.7
+    coherence: 0.6
+    density: 0.4
+  praxic:
+    know: 1.0
+    completion: 1.0
+    context: 1.0
+    impact: 0.9
+    uncertainty: 0.8
+    change: 0.9
+    do: 0.7
+    clarity: 0.7
+    coherence: 0.7
+    signal: 0.4
+    density: 0.4
+    state: 0.7
+contacts: []
+domain: ai/autonomy
+domain_config: {}
+engagements: []
+evidence_profile: code
+languages: []
+mesh_id_prefix: empirica-foundation.carly
+name: empirica-autonomy
+project_id: 492482dc-8156-40cd-a110-ce7081212215
+status: active
+subjects: {}
+tags: []
+beads:
+  default_enabled: false
+edges: []
