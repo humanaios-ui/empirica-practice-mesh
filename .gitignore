@@ -1,0 +1,16 @@
+node_modules/
+.next/
+dist/
+build/
+*.egg-info/
+__pycache__/
+.empirica/sessions/
+.empirica/*.db*
+.empirica/*.jsonl
+.empirica/subagent_sessions/
+.empirica/active_transaction_*
+.empirica/cache/
+.claude/worktrees/
+.env
+.env.local
+.DS_Store
