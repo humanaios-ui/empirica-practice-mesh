@@ -1,111 +1,15 @@
-name: empirica-temporal-oracle
+version: '3.0'
 ai_id: empirica-temporal-oracle
-description: "Temporal Oracle & Mesh Coordinator — Ground truth for timeframes, mesh synchronization, and orchestration"
-
-version: "1.0.0"
-created_at: "2026-09-11"
-
-# Identity in the mesh
-canonical_seat: "empirica-foundation.carly.empirica-temporal-oracle"
-org: "empirica-foundation"
-tenant: "carly"
-
-# Practice role and responsibility
-role:
-  name: "Temporal Oracle & Circulatory System"
-  description: |
-    Central coordinator for the empirica foundation mesh:
-    - Ground truth for timeframe/deadline tracking
-    - Synchronization oracle (detects drift, routes corrections)
-    - Circulatory system (keeps mesh healthy and aligned)
-    - Temporal coordinator (ensures sequential orchestration)
-
-  responsibilities:
-    - Track all timeframes across 15 practices
-    - Detect sync drift and route corrections
-    - Coordinate GitHub/repository synchronization
-    - Provide oracle guidance on task sequencing
-    - Monitor mesh health and communication patterns
-    - Act as "heart" pumping coordination through mesh
-
-# Operational mode
-execution:
-  mode: "autonomous"
-  loop_interval: "30m"  # Check mesh every 30 minutes
-  polling_services:
-    - empirica_mailbox
-    - mesh_sync_state
-    - github_repository_state
-    - temporal_tracking_db
-
-# Integration points
-integrations:
-  automation_framework:
-    type: "receiver"
-    from: "empirica-foundation-evaluator"
-    receives: ["mailbox_state", "goals_state", "telemetry"]
-
-  mesh_coordination:
-    type: "broadcast"
-    targets: ["all_15_practices"]
-    broadcasts: ["timeframe_updates", "sync_directives", "oracle_guidance"]
-
-  github_sync:
-    type: "coordinator"
-    manages: ["branch_divergence", "push_errors", "sync_strategy"]
-    integrates_with: ["mesh-support"]
-
-# Core services
-services:
-  temporal_tracker:
-    description: "Track deadlines, phases, checkpoints across all practices"
-    exposes: ["current_phase", "deadline_status", "next_checkpoint"]
-
-  sync_coordinator:
-    description: "Detect and resolve mesh synchronization drift"
-    exposes: ["sync_status", "drift_detection", "correction_routes"]
-
-  oracle_advisor:
-    description: "Query temporal state and get sequencing guidance"
-    exposes: ["next_action", "dependency_resolution", "blocker_forecast"]
-
-  repository_health:
-    description: "Monitor and coordinate GitHub repository state"
-    exposes: ["branch_status", "push_health", "sync_recommendations"]
-
-# Telemetry & observability
-telemetry:
-  enabled: true
-  metrics:
-    - mesh_sync_drift_ratio
-    - coordination_latency_ms
-    - blocker_resolution_time_hours
-    - oracle_query_accuracy
-    - repository_sync_health_score
-  dashboard_endpoint: "https://intent-os.local/api/temporal-oracle"
-
-# Data sources (for ground truth)
-data_sources:
-  empirica_mailbox: "raw proposal state"
-  mesh_ser_states: "shared epistemic records"
-  git_commit_history: "repository temporal state"
-  practice_postflights: "work completion timestamps"
-  autonomous_loop_logs: "execution history"
-
-# Query interface (other practices call this)
-api:
-  endpoints:
-    - GET /status — Current mesh sync status
-    - GET /phase/{practice_id} — What phase is a practice in?
-    - GET /next-checkpoint — When's the next coordination checkpoint?
-    - GET /blocker-forecast — What blockers are predicted?
-    - GET /sync-drift — How out of sync is the mesh?
-    - POST /sync-now — Force immediate synchronization
-    - POST /oracle-query — Ask for sequencing guidance
-
-# Metadata
-metadata:
-  role_tier: "required"
-  mesh_criticality: "high"
-  failure_impact: "mesh_coordination_halted"
-  recovery_sla_minutes: 15
+canonical_seat: empirica-foundation.carly.empirica-temporal-oracle
+classification: internal
+created_at: '2026-09-11'
+created_by: andersonfamily
+description: Temporal coordination oracle — detects mesh drift every 30 minutes, broadcasts guidance
+org_id: org-empirica-foundation
+tenant_slug: carly
+type: operations
+project_id: f47e3c1a-9d2e-4621-a8b3-c9e1d2f4a5b6
+status: active
+name: empirica-temporal-oracle
+contacts: []
+engagements: []
