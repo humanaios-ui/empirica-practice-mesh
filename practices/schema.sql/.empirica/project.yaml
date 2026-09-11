@@ -1,0 +1,55 @@
+version: '3.0'
+name: schema.sql
+description: Supabase data health, collection, and database management
+project_id: 590e9034-e95d-4072-baf4-33019643ddcf
+ai_id: schema
+type: data
+domain: ''
+classification: internal
+status: active
+evidence_profile: hybrid
+languages: []
+tags: []
+created_at: '2026-08-15'
+created_by: andersonfamily
+contacts: []
+engagements: []
+edges: []
+beads:
+  default_enabled: false
+subjects: {}
+auto_detect:
+  enabled: true
+  method: path_match
+domain_config: {}
+calibration_weights:
+  noetic:
+    know: 1.0
+    context: 0.8
+    signal: 1.0
+    uncertainty: 1.0
+    do: 0.3
+    change: 0.2
+    state: 0.3
+    completion: 0.5
+    impact: 0.3
+    clarity: 0.7
+    coherence: 0.6
+    density: 0.4
+  praxic:
+    know: 1.0
+    completion: 0.6
+    context: 1.0
+    impact: 0.9
+    uncertainty: 0.8
+    change: 0.8
+    do: 0.7
+    clarity: 0.7
+    coherence: 0.7
+    signal: 0.4
+    density: 0.4
+    state: 0.6
+org_id: org-empirica-foundation
+tenant_slug: carly
+mesh_id_prefix: empirica-foundation.carly
+canonical_seat: empirica-foundation.carly.schema

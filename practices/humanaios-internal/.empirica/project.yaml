@@ -1,0 +1,56 @@
+version: '2.0'
+name: humanaios-internal
+description: humanaios-internal project
+project_id: dae1d6fd-c8dc-40fc-ab61-567ec467a610
+ai_id: humanaios-internal
+type: software
+domain: ''
+classification: internal
+status: active
+evidence_profile: auto
+languages: []
+tags: []
+created_at: '2026-07-18'
+created_by: andersonfamily
+repository: https://github.com/humanaios-ui/humanaios-internal.git
+org_id: org-empirica-foundation
+tenant_slug: carly
+mesh_id_prefix: empirica-foundation.carly
+canonical_seat: empirica-foundation.carly.humanaios-internal
+contacts: []
+engagements: []
+edges: []
+beads:
+  default_enabled: false
+subjects: {}
+auto_detect:
+  enabled: true
+  method: path_match
+domain_config: {}
+calibration_weights:
+  noetic:
+    know: 1.0
+    context: 0.8
+    signal: 0.9
+    uncertainty: 1.0
+    do: 0.3
+    change: 0.2
+    state: 0.3
+    completion: 0.5
+    impact: 0.3
+    clarity: 0.7
+    coherence: 0.6
+    density: 0.4
+  praxic:
+    know: 1.0
+    completion: 1.0
+    context: 1.0
+    impact: 0.9
+    uncertainty: 0.8
+    change: 0.9
+    do: 0.7
+    clarity: 0.7
+    coherence: 0.7
+    signal: 0.4
+    density: 0.4
+    state: 0.7

@@ -1,0 +1,72 @@
+version: '3.0'
+name: collaborator-ops
+description: 'Collaborator-ops: HumanAIOS''s live-collaborator relationship seat.
+  Owns lifecycle stages 3-6 (ratification, consent, publish-gating) + the relationship
+  record. Defers deal terms to humanaios, attraction (stages 0-2) to outreach.'
+project_id: a9b96155-54f5-48ae-99f9-adb4288f7e3c
+ai_id: collaborator-ops
+type: operations
+domain: collaborations
+classification: restricted
+status: active
+phase: phase-3
+readiness_gate: phase-3-entry-blockers
+evidence_profile: prose
+languages: []
+tags:
+- collaborations
+- partnerships
+- governance
+created_at: '2026-07-06'
+created_by: andersonfamily
+org_id: org-empirica-foundation
+tenant_slug: carly
+mesh_id_prefix: empirica-foundation.carly
+canonical_seat: empirica-foundation.carly.collaborator-ops
+contacts: []
+engagements: []
+edges: []
+beads:
+  default_enabled: false
+subjects: {}
+auto_detect:
+  enabled: true
+  method: path_match
+domain_config: {}
+phase_3_config:
+  resource_allocation_hours: 12
+  engagement_tracking: true
+  pipeline_management: true
+  collaborator_resource_tracking: true
+  success_criteria:
+    - collaborator-resource-allocation-tracked
+    - engagement-maintained
+    - collaborator-findings-integrated
+    - compliance-blockers-cleared
+calibration_weights:
+  noetic:
+    know: 1.0
+    context: 0.8
+    signal: 0.9
+    uncertainty: 1.0
+    do: 0.3
+    change: 0.2
+    state: 0.3
+    completion: 0.5
+    impact: 0.3
+    clarity: 0.7
+    coherence: 0.6
+    density: 0.4
+  praxic:
+    know: 1.0
+    completion: 1.0
+    context: 1.0
+    impact: 0.9
+    uncertainty: 0.8
+    change: 0.9
+    do: 0.7
+    clarity: 0.7
+    coherence: 0.7
+    signal: 0.4
+    density: 0.4
+    state: 0.9
