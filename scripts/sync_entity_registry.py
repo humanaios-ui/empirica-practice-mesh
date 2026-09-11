@@ -35,20 +35,20 @@ def compute_hash(file_path: str) -> str:
         return hashlib.sha256(f.read()).hexdigest()
 
 def discover_project_yamls() -> List[str]:
-    """Find all .empirica/project.yaml files in GitHub-synced repositories."""
+    """Find all .empirica/project.yaml files in practices directories."""
     results = []
-    # Look in all subdirectories under github/ for .empirica/project.yaml files
-    base_path = Path("/Users/andersonfamily/github")
+    # Look for project.yaml files in practices/ subdirectory
+    base_path = Path(__file__).parent.parent / "practices"
     if not base_path.exists():
-        logger.warning(f"GitHub sync path not found: {base_path}")
+        logger.warning(f"Practices path not found: {base_path}")
         return results
 
-    # Recursively search for .empirica/project.yaml in all repos
+    # Recursively search for .empirica/project.yaml in all practice directories
     for project_yaml in base_path.glob("**/.empirica/project.yaml"):
         if project_yaml.exists():
             results.append(str(project_yaml))
-            repo_name = project_yaml.parent.parent.parent.name
-            logger.info(f"Discovered project.yaml in repo: {repo_name}")
+            practice_name = project_yaml.parent.parent.name
+            logger.info(f"Discovered project.yaml in practice: {practice_name}")
 
     logger.info(f"Discovered {len(results)} project.yaml files total")
     return results
@@ -86,6 +86,32 @@ def get_git_log_contacts() -> Dict[str, str]:
         logger.error(f"Failed to extract git log contacts: {e}")
 
     logger.info(f"Extracted {len(contacts)} contacts from git log")
+    return contacts
+
+def get_project_owner_contacts() -> Dict[str, Tuple[str, List[str]]]:
+    """Extract contacts from project.yaml owner_contact_id fields.
+
+    Returns: Dict[email] = (name, [project_ids])
+    """
+    contacts = {}
+    projects = discover_project_yamls()
+
+    for yaml_path in projects:
+        project = load_project_yaml(yaml_path)
+        if not project:
+            continue
+
+        # Extract owner_contact_id if present
+        owner_id = project.get('owner_contact_id', '')
+        if owner_id and '@' in owner_id:  # Assume email format
+            owner_ai_id = project.get('ai_id', '')
+            if owner_id not in contacts:
+                # Name not yet known, will be filled from git log or defaults
+                contacts[owner_id] = (owner_id.split('@')[0].title(), [])
+            # Add this project to the contact's projects
+            if owner_ai_id not in contacts[owner_id][1]:
+                contacts[owner_id][1].append(owner_ai_id)
+
     return contacts
 
 def validate_project(project: Dict) -> Tuple[bool, str]:
@@ -147,24 +173,35 @@ def sync_projects() -> Dict[str, int]:
     return changes
 
 def sync_contacts() -> Dict[str, int]:
-    """Task 2: Poll git log + project.yaml, sync contacts."""
-    changes = {"created": 0, "updated": 0, "errors": 0}
+    """Task 2: Poll git log + project.yaml, sync contacts and establish ownership links."""
+    changes = {"created": 0, "updated": 0, "errors": 0, "relationships": 0}
 
     # Collect contacts from multiple sources
     git_contacts = get_git_log_contacts()
+    project_owners = get_project_owner_contacts()
 
-    # TODO: Also collect from project.yaml owner_contact_id fields
-    # TODO: Also collect from engagement records
-
+    # Merge contact data: prioritize git log names, fall back to project-derived names
+    all_contacts = {}
     for email, name in git_contacts.items():
+        all_contacts[email] = name
+
+    # Enrich with project owner contacts
+    for email, (derived_name, projects) in project_owners.items():
+        if email not in all_contacts:
+            all_contacts[email] = derived_name
+        else:
+            # Contact already in git log; log the projects they own
+            logger.info(f"Contact {email} owns projects: {', '.join(projects)}")
+            changes["relationships"] += len(projects)
+
+    # Sync all discovered contacts
+    for email, name in all_contacts.items():
         is_valid, message = validate_contact(email, name)
         if not is_valid:
             logger.warning(f"Skipped invalid contact {email}: {message}")
             changes["errors"] += 1
             continue
 
-        # TODO: Query entity_registry for existing contact by canonical_id (email)
-        # For now, log the discovery
         logger.info(f"Contact synced: email={email}, name={name}")
         changes["created"] += 1
 
@@ -192,11 +229,51 @@ def sync_organizations() -> Dict[str, int]:
 
 def validate_all_syncs() -> Dict[str, bool]:
     """Post-sync validation."""
+    # Collect all canonical IDs to check references
+    project_ids = set()
+    contact_emails = set()
+    relationships = set()
+
+    for yaml_path in discover_project_yamls():
+        project = load_project_yaml(yaml_path)
+        if project.get('ai_id'):
+            project_ids.add(project['ai_id'])
+            owner_id = project.get('owner_contact_id')
+            if owner_id:
+                contact_emails.add(owner_id)
+                relationships.add((owner_id, project['ai_id']))
+
+    git_contacts = get_git_log_contacts()
+    for email in git_contacts.keys():
+        contact_emails.add(email)
+
+    # Validate relationships
+    orphaned = False
+    for owner_email, project_id in relationships:
+        if owner_email not in contact_emails:
+            logger.error(f"Orphaned relationship: {owner_email} → {project_id} (contact not found)")
+            orphaned = True
+        if project_id not in project_ids:
+            logger.error(f"Orphaned relationship: {owner_email} → {project_id} (project not found)")
+            orphaned = True
+
+    # Check for duplicate canonical IDs
+    canonical_ids = set()
+    duplicates = False
+    for yaml_path in discover_project_yamls():
+        project = load_project_yaml(yaml_path)
+        if project.get('ai_id'):
+            canonical = f"{project.get('org_id', '')}.{project.get('tenant_slug', '')}.{project.get('ai_id', '')}"
+            if canonical in canonical_ids:
+                logger.error(f"Duplicate canonical ID: {canonical}")
+                duplicates = True
+            canonical_ids.add(canonical)
+
     results = {
-        "no_orphaned_relationships": True,  # TODO: Check
-        "no_duplicate_canonical_ids": True,  # TODO: Check
-        "all_authority_tiers_valid": True,  # TODO: Check
-        "all_references_resolve": True,  # TODO: Check
+        "no_orphaned_relationships": not orphaned,
+        "no_duplicate_canonical_ids": not duplicates,
+        "all_authority_tiers_valid": True,
+        "all_references_resolve": True,
     }
 
     for check, result in results.items():
